@@ -6,15 +6,28 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "1. Nama"
 // "2. Nama"
 // ...
-const sorter = null;
+const sorter = (nama, fnSortir) =>{
+  const result = fnSortir(nama);
+  const listNama = [];
+
+  for (let i = 0; i < result.length; i++){
+    listNama.push(`${i + 1}. ${nama[i]}`);
+  }
+
+  return listNama;
+  };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
-const sortAscending = null;
+const sortAscending = (nama) => {
+  return nama.sort();
+};
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
-const sortDescending = null;
+const sortDescending = (nama) => {
+  return nama.sort().reverse();
+};
 
 // ! JANGAN DIMODIFIKASI
 (function main() {
